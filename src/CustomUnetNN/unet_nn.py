@@ -1,6 +1,7 @@
 import mlflow
 import torch
 import torchvision.transforms.functional as TF
+
 from segmentation_models_pytorch.metrics import f1_score, get_stats, iou_score
 from torch import nn
 
@@ -163,8 +164,12 @@ class UNet(nn.Module):
             num_classes=7,
         )
         metrics = {
-            "IoU": iou_score(tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"),
-            "F1score": f1_score(tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"),
+            "IoU": iou_score(
+                tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
+            ),
+            "F1score": f1_score(
+                tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
+            ),
         }
 
         return loss, metrics, outputs
