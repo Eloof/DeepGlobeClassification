@@ -40,30 +40,24 @@ For more details and to access the dataset, please visit the [DeepGlobe Land Cov
 Project Organization
 ------------
 
-    my_project/
+    DeepGlobeClassificationPr/
       ├── configs/
-      │   ├── config.yaml
-      │   └── hyperparameters.yaml
+      │   ├── config.py              <- Config to genereate homedir and classRGBvalues
+      │   └── config_train_test.py   <- Config with train and test augmentation
       ├── data/
-      │   ├── train/
-      │   ├── validation/
-      │   └── test/
-      ├── dataloader/
-      │   ├── data_loader.py
-      │   ├── preprocessing.py
-      │   └── transforms.py
+      │   └── data_download.py       <- Script to download data from Kaggle(need access token)
+      ├── dataLoader/
+      │   ├── data_loader.py         <- Script to preprocess and load data
+      │   └── data_module.py         <- Script to generate train/val datatoader
       ├── mlartifacts/
-      │   ├── model_weights/
-      │   ├── logs/
-      │   └── figures/
       ├── mlruns/
-      │   ├── run1/
-      │   ├── run2/
       └── src/
-          ├── model.py
-          ├── train.py
-          ├── infer.py
-          └── utils.py
+      │   └── data_download/
+      │      ├── fine_tune_model.py     <- Script to fineTune model from best checkpoint
+      │      ├── train.py               <- Script to train
+      │      ├── unet_nn.py             <- Class with NNUnet
+      │      └── utils.py               <- Class with logging and configure with pytorch_lightning
+      
 
 
 --------
