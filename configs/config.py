@@ -4,11 +4,11 @@ from pathlib import Path
 import pandas as pd
 
 # Get the home directory path
-HOME_DIR = Path.home()
+HOME_DIR = Path(__file__).parent.parent.resolve()
 
 # Read the class_dict.csv file into a Pandas DataFrame
 class_dict = pd.read_csv(
-    os.path.join(HOME_DIR, "DeepGlobeClassificationPr/data/Data/class_dict.csv")
+    HOME_DIR / "data/Data/class_dict.csv"
 )
 
 # Convert the "name" column of the DataFrame to a dictionary and
