@@ -17,7 +17,7 @@ class SegmentationModel(pl.LightningModule):
         super().__init__()
         self.model = UNet(in_channels, num_segmentations)
 
-    def forward(self, x: torch.Tensor, targets: torch.Tensor) -> tuple:
+    def forward(self, x: torch.Tensor, targets: torch.Tensor = None) -> tuple:
         """
         Forward pass of the segmentation model.
 

@@ -124,7 +124,7 @@ class UNet(nn.Module):
 
         self.pool = nn.MaxPool2d(kernel_size=2, stride=2)
 
-    def forward(self, inputs: torch.Tensor, targets: torch.Tensor) -> tuple:
+    def forward(self, inputs: torch.Tensor, targets: torch.Tensor = None) -> tuple:
         """
         Forward pass through the UNet model.
 
@@ -156,20 +156,23 @@ class UNet(nn.Module):
 
         outputs = self.output(inputs)
 
-        loss = self.loss_func(outputs, targets)
-        tp_val, fp_val, fn_val, tn_val = get_stats(
-            outputs.argmax(dim=1).unsqueeze(1).type(torch.int64),
-            targets.argmax(dim=1).unsqueeze(1).type(torch.int64),
-            mode="multiclass",
-            num_classes=7,
-        )
-        metrics = {
-            "IoU": iou_score(
-                tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
-            ),
-            "F1score": f1_score(
-                tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
-            ),
-        }
+        if targets:
+            loss = self.loss_func(outputs, targets)
+            tp_val, fp_val, fn_val, tn_val = get_stats(
+                outputs.argmax(dim=1).unsqueeze(1).type(torch.int64),
+                targets.argmax(dim=1).unsqueeze(1).type(torch.int64),
+                mode="multiclass",
+                num_classes=7,
+            )
+            metrics = {
+                "IoU": iou_score(
+                    tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
+                ),
+                "F1score": f1_score(
+                    tp_val, fp_val, fn_val, tn_val, reduction="micro-imagewise"
+                ),
+            }
 
-        return loss, metrics, outputs
+            return loss, metrics, outputs
+
+        return outputs

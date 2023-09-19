@@ -112,7 +112,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--data_training_dir",
-        default="DeepGlobeClassificationPr/data/Data/train",
+        default="data/Data/train",
         type=str,
         help="Directory for data loading",
     )
