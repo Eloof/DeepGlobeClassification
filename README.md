@@ -36,3 +36,5 @@ Each satellite image in the dataset is paired with a mask image that provides la
 7. **Unknown**: RGB (0, 0, 0)
    - Description: Encompasses clouds and other regions where the land cover is uncertain or not specified.
 
+
+For more details and to access the dataset, please visit the [DeepGlobe Land Cover Classification Dataset on Kaggle](https://www.kaggle.com/datasets/balraj98/deepglobe-land-cover-classification-dataset).
