@@ -1,0 +1,19 @@
+channels:
+- conda-forge
+dependencies:
+- python=3.10.7
+- pip<=23.2.1
+- pip:
+  - mlflow==2.7.0
+  - cloudpickle==2.2.1
+  - dill==0.3.7
+  - matplotlib==3.7.3
+  - numpy==1.25.2
+  - packaging==23.1
+  - pandas==2.1.0
+  - pytorch-lightning==2.0.8
+  - pyyaml==6.0.1
+  - requests==2.31.0
+  - segmentation-models-pytorch==0.3.3
+  - torch==1.13.0
+name: mlflow-env

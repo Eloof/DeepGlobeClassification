@@ -1,0 +1,102 @@
+   | Name                     | Type             | Params
+---------------------------------------------------------------
+0  | model                    | UNet             | 1.9 M 
+1  | model.loss_func          | CrossEntropyLoss | 0     
+2  | model.down_part          | ModuleList       | 294 K 
+3  | model.down_part.0        | DoubleConv       | 2.8 K 
+4  | model.down_part.0.conv   | Sequential       | 2.8 K 
+5  | model.down_part.0.conv.0 | Conv2d           | 432   
+6  | model.down_part.0.conv.1 | BatchNorm2d      | 32    
+7  | model.down_part.0.conv.2 | ReLU             | 0     
+8  | model.down_part.0.conv.3 | Dropout          | 0     
+9  | model.down_part.0.conv.4 | Conv2d           | 2.3 K 
+10 | model.down_part.0.conv.5 | BatchNorm2d      | 32    
+11 | model.down_part.0.conv.6 | ReLU             | 0     
+12 | model.down_part.1        | DoubleConv       | 14.0 K
+13 | model.down_part.1.conv   | Sequential       | 14.0 K
+14 | model.down_part.1.conv.0 | Conv2d           | 4.6 K 
+15 | model.down_part.1.conv.1 | BatchNorm2d      | 64    
+16 | model.down_part.1.conv.2 | ReLU             | 0     
+17 | model.down_part.1.conv.3 | Dropout          | 0     
+18 | model.down_part.1.conv.4 | Conv2d           | 9.2 K 
+19 | model.down_part.1.conv.5 | BatchNorm2d      | 64    
+20 | model.down_part.1.conv.6 | ReLU             | 0     
+21 | model.down_part.2        | DoubleConv       | 55.6 K
+22 | model.down_part.2.conv   | Sequential       | 55.6 K
+23 | model.down_part.2.conv.0 | Conv2d           | 18.4 K
+24 | model.down_part.2.conv.1 | BatchNorm2d      | 128   
+25 | model.down_part.2.conv.2 | ReLU             | 0     
+26 | model.down_part.2.conv.3 | Dropout          | 0     
+27 | model.down_part.2.conv.4 | Conv2d           | 36.9 K
+28 | model.down_part.2.conv.5 | BatchNorm2d      | 128   
+29 | model.down_part.2.conv.6 | ReLU             | 0     
+30 | model.down_part.3        | DoubleConv       | 221 K 
+31 | model.down_part.3.conv   | Sequential       | 221 K 
+32 | model.down_part.3.conv.0 | Conv2d           | 73.7 K
+33 | model.down_part.3.conv.1 | BatchNorm2d      | 256   
+34 | model.down_part.3.conv.2 | ReLU             | 0     
+35 | model.down_part.3.conv.3 | Dropout          | 0     
+36 | model.down_part.3.conv.4 | Conv2d           | 147 K 
+37 | model.down_part.3.conv.5 | BatchNorm2d      | 256   
+38 | model.down_part.3.conv.6 | ReLU             | 0     
+39 | model.bottleneck         | DoubleConv       | 885 K 
+40 | model.bottleneck.conv    | Sequential       | 885 K 
+41 | model.bottleneck.conv.0  | Conv2d           | 294 K 
+42 | model.bottleneck.conv.1  | BatchNorm2d      | 512   
+43 | model.bottleneck.conv.2  | ReLU             | 0     
+44 | model.bottleneck.conv.3  | Dropout          | 0     
+45 | model.bottleneck.conv.4  | Conv2d           | 589 K 
+46 | model.bottleneck.conv.5  | BatchNorm2d      | 512   
+47 | model.bottleneck.conv.6  | ReLU             | 0     
+48 | model.up_part            | ModuleList       | 762 K 
+49 | model.up_part.0          | Sequential       | 574 K 
+50 | model.up_part.0.0        | ConvTranspose2d  | 131 K 
+51 | model.up_part.0.1        | DoubleConv       | 442 K 
+52 | model.up_part.0.1.conv   | Sequential       | 442 K 
+53 | model.up_part.0.1.conv.0 | Conv2d           | 294 K 
+54 | model.up_part.0.1.conv.1 | BatchNorm2d      | 256   
+55 | model.up_part.0.1.conv.2 | ReLU             | 0     
+56 | model.up_part.0.1.conv.3 | Dropout          | 0     
+57 | model.up_part.0.1.conv.4 | Conv2d           | 147 K 
+58 | model.up_part.0.1.conv.5 | BatchNorm2d      | 256   
+59 | model.up_part.0.1.conv.6 | ReLU             | 0     
+60 | model.up_part.1          | Sequential       | 143 K 
+61 | model.up_part.1.0        | ConvTranspose2d  | 32.8 K
+62 | model.up_part.1.1        | DoubleConv       | 110 K 
+63 | model.up_part.1.1.conv   | Sequential       | 110 K 
+64 | model.up_part.1.1.conv.0 | Conv2d           | 73.7 K
+65 | model.up_part.1.1.conv.1 | BatchNorm2d      | 128   
+66 | model.up_part.1.1.conv.2 | ReLU             | 0     
+67 | model.up_part.1.1.conv.3 | Dropout          | 0     
+68 | model.up_part.1.1.conv.4 | Conv2d           | 36.9 K
+69 | model.up_part.1.1.conv.5 | BatchNorm2d      | 128   
+70 | model.up_part.1.1.conv.6 | ReLU             | 0     
+71 | model.up_part.2          | Sequential       | 36.0 K
+72 | model.up_part.2.0        | ConvTranspose2d  | 8.2 K 
+73 | model.up_part.2.1        | DoubleConv       | 27.8 K
+74 | model.up_part.2.1.conv   | Sequential       | 27.8 K
+75 | model.up_part.2.1.conv.0 | Conv2d           | 18.4 K
+76 | model.up_part.2.1.conv.1 | BatchNorm2d      | 64    
+77 | model.up_part.2.1.conv.2 | ReLU             | 0     
+78 | model.up_part.2.1.conv.3 | Dropout          | 0     
+79 | model.up_part.2.1.conv.4 | Conv2d           | 9.2 K 
+80 | model.up_part.2.1.conv.5 | BatchNorm2d      | 64    
+81 | model.up_part.2.1.conv.6 | ReLU             | 0     
+82 | model.up_part.3          | Sequential       | 9.0 K 
+83 | model.up_part.3.0        | ConvTranspose2d  | 2.1 K 
+84 | model.up_part.3.1        | DoubleConv       | 7.0 K 
+85 | model.up_part.3.1.conv   | Sequential       | 7.0 K 
+86 | model.up_part.3.1.conv.0 | Conv2d           | 4.6 K 
+87 | model.up_part.3.1.conv.1 | BatchNorm2d      | 32    
+88 | model.up_part.3.1.conv.2 | ReLU             | 0     
+89 | model.up_part.3.1.conv.3 | Dropout          | 0     
+90 | model.up_part.3.1.conv.4 | Conv2d           | 2.3 K 
+91 | model.up_part.3.1.conv.5 | BatchNorm2d      | 32    
+92 | model.up_part.3.1.conv.6 | ReLU             | 0     
+93 | model.output             | Conv2d           | 119   
+94 | model.pool               | MaxPool2d        | 0     
+---------------------------------------------------------------
+1.9 M     Trainable params
+0         Non-trainable params
+1.9 M     Total params
+7.771     Total estimated model params size (MB)
