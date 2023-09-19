@@ -37,15 +37,15 @@ Each satellite image in the dataset is paired with a mask image that provides la
 
 For more details and to access the dataset, please visit the [DeepGlobe Land Cover Classification Dataset on Kaggle](https://www.kaggle.com/datasets/balraj98/deepglobe-land-cover-classification-dataset).
 
-my_project/ 
-├── configs/ 
-│   ├── config.yaml 
-│   └── hyperparameters.yaml 
+my_project/
+├── configs/
+│   ├── config.yaml
+│   └── hyperparameters.yaml
 ├── data/
-│   ├── train/ 
-│   ├── validation/ 
-│   └── test/ 
-├── dataloader/ 
+│   ├── train/
+│   ├── validation/
+│   └── test/
+├── dataloader/
 │   ├── data_loader.py
 │   ├── preprocessing.py
 │   └── transforms.py
@@ -61,4 +61,5 @@ my_project/
     ├── train.py
     ├── infer.py
     └── utils.py
+
 
