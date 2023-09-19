@@ -58,7 +58,7 @@ Project Organization
       │      ├── unet_nn.py             <- Class with NNUnet
       │      └── utils.py               <- Class with logging and configure with pytorch_lightning
       │   └── Production/
-      │      ├── predict.py             <- Inference dcript
+      │      ├── predict.py             <- Inference script
       
 
 
