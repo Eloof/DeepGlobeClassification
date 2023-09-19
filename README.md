@@ -64,7 +64,6 @@ Project Organization
 
 --------
 # Metrics
- IoU (Intersection over Union) и F1-мерa (F1-Score).
 
  **IoU** (Intersection over Union)
 - **Измерение качества сегментации**: IoU позволяет измерять, насколько точно модель сегментирует объекты на изображении. Чем выше значение IoU, тем лучше сегментация.
