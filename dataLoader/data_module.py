@@ -4,7 +4,7 @@ from torch.utils.data import DataLoader, random_split
 import pytorch_lightning as pl
 
 from configs.config import HOME_DIR
-from configs.config_train import train_augmentation
+from configs.config_train_test import train_augmentation
 
 from dataLoader.data_loader import ImageDataset
 
