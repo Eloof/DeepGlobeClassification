@@ -1,7 +1,5 @@
 # DeepGlobeClassification
 
-# Land Cover Challenge Dataset
-
 ## Data Description
 
 The training data for the Land Cover Challenge consists of 803 satellite images in RGB format, each with dimensions of 2448x2448 pixels. These images have a pixel resolution of 50cm and were collected by DigitalGlobe's satellite.
@@ -38,3 +36,35 @@ Each satellite image in the dataset is paired with a mask image that provides la
 
 
 For more details and to access the dataset, please visit the [DeepGlobe Land Cover Classification Dataset on Kaggle](https://www.kaggle.com/datasets/balraj98/deepglobe-land-cover-classification-dataset).
+
+my_project/
+│
+├── configs/
+│ ├── config.yaml
+│ └── hyperparameters.yaml
+│
+├── data/
+│ ├── train/
+│ ├── validation/
+│ └── test/
+│
+├── dataloader/
+│ ├── data_loader.py
+│ ├── preprocessing.py
+│ └── transforms.py
+│
+├── mlartifacts/
+│ ├── model_weights/
+│ ├── logs/
+│ └── figures/
+│
+├── mlruns/
+│ ├── run1/
+│ ├── run2/
+│ └── ...
+│
+└── src/
+├── model.py
+├── train.py
+├── infer.py
+└── utils.py
