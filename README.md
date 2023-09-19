@@ -41,7 +41,6 @@ my_project/
 ├── configs/
 │   ├── config.yaml
 │   └── hyperparameters.yaml
-
 ├── data/
 │   ├── train/
 │   ├── validation/
