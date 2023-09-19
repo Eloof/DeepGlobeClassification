@@ -63,6 +63,9 @@ Project Organization
 
 
 --------
+# Metrics
+ IoU (Intersection over Union) и F1-меру (F1-Score)
+
 
 
 
