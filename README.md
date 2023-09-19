@@ -52,11 +52,13 @@ Project Organization
       ├── mlartifacts/
       ├── mlruns/
       └── src/
-      │   └── data_download/
+      │   └── CustomUnetNN/
       │      ├── fine_tune_model.py     <- Script to fineTune model from best checkpoint
       │      ├── train.py               <- Script to train
       │      ├── unet_nn.py             <- Class with NNUnet
       │      └── utils.py               <- Class with logging and configure with pytorch_lightning
+      │   └── Production/
+      │      ├── predict.py             <- Inference dcript
       
 
 
