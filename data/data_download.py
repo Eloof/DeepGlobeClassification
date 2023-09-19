@@ -40,8 +40,6 @@ class KaggleDatasetDownloader:
             logging.error(f"Error downloading dataset: {str(e)}")
 
 
-
-
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 
